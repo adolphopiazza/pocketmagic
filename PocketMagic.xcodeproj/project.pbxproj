@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		38AEE79D2ACCFB1200CAE9BD /* PocketMagicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AEE79C2ACCFB1200CAE9BD /* PocketMagicApp.swift */; };
-		38AEE79F2ACCFB1200CAE9BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AEE79E2ACCFB1200CAE9BD /* ContentView.swift */; };
 		38AEE7A12ACCFB1300CAE9BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE7A02ACCFB1300CAE9BD /* Assets.xcassets */; };
 		38AEE7A42ACCFB1300CAE9BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE7A32ACCFB1300CAE9BD /* Preview Assets.xcassets */; };
+		38ECE0F72ACDB5FB00C4C2C5 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ECE0F62ACDB5FB00C4C2C5 /* TabBarView.swift */; };
+		38ECE0F92ACDB6D200C4C2C5 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ECE0F82ACDB6D200C4C2C5 /* CharactersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		38AEE7992ACCFB1200CAE9BD /* PocketMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AEE79C2ACCFB1200CAE9BD /* PocketMagicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketMagicApp.swift; sourceTree = "<group>"; };
-		38AEE79E2ACCFB1200CAE9BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38AEE7A02ACCFB1300CAE9BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38AEE7A32ACCFB1300CAE9BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38ECE0F62ACDB5FB00C4C2C5 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		38ECE0F82ACDB6D200C4C2C5 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				38AEE79C2ACCFB1200CAE9BD /* PocketMagicApp.swift */,
-				38AEE79E2ACCFB1200CAE9BD /* ContentView.swift */,
+				38ECE0F62ACDB5FB00C4C2C5 /* TabBarView.swift */,
+				38ECE0F82ACDB6D200C4C2C5 /* CharactersView.swift */,
 				38AEE7A02ACCFB1300CAE9BD /* Assets.xcassets */,
 				38AEE7A22ACCFB1300CAE9BD /* Preview Content */,
 			);
@@ -137,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38AEE79F2ACCFB1200CAE9BD /* ContentView.swift in Sources */,
+				38ECE0F72ACDB5FB00C4C2C5 /* TabBarView.swift in Sources */,
 				38AEE79D2ACCFB1200CAE9BD /* PocketMagicApp.swift in Sources */,
+				38ECE0F92ACDB6D200C4C2C5 /* CharactersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
