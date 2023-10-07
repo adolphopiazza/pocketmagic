@@ -10,6 +10,10 @@
 		38AEE79D2ACCFB1200CAE9BD /* PocketMagicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AEE79C2ACCFB1200CAE9BD /* PocketMagicApp.swift */; };
 		38AEE7A12ACCFB1300CAE9BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE7A02ACCFB1300CAE9BD /* Assets.xcassets */; };
 		38AEE7A42ACCFB1300CAE9BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38AEE7A32ACCFB1300CAE9BD /* Preview Assets.xcassets */; };
+		38E981B22AD1B27A00893E25 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E981B12AD1B27A00893E25 /* CharactersModel.swift */; };
+		38E981B42AD1B28800893E25 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E981B32AD1B28800893E25 /* CharactersViewModel.swift */; };
+		38E981B62AD1B2FA00893E25 /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E981B52AD1B2FA00893E25 /* BaseNetworking.swift */; };
+		38E981B92AD1B5E600893E25 /* CharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E981B82AD1B5E600893E25 /* CharactersService.swift */; };
 		38ECE0F72ACDB5FB00C4C2C5 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ECE0F62ACDB5FB00C4C2C5 /* TabBarView.swift */; };
 		38ECE0F92ACDB6D200C4C2C5 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ECE0F82ACDB6D200C4C2C5 /* CharactersView.swift */; };
 /* End PBXBuildFile section */
@@ -19,6 +23,10 @@
 		38AEE79C2ACCFB1200CAE9BD /* PocketMagicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketMagicApp.swift; sourceTree = "<group>"; };
 		38AEE7A02ACCFB1300CAE9BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38AEE7A32ACCFB1300CAE9BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38E981B12AD1B27A00893E25 /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
+		38E981B32AD1B28800893E25 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		38E981B52AD1B2FA00893E25 /* BaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworking.swift; sourceTree = "<group>"; };
+		38E981B82AD1B5E600893E25 /* CharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersService.swift; sourceTree = "<group>"; };
 		38ECE0F62ACDB5FB00C4C2C5 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		38ECE0F82ACDB6D200C4C2C5 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,9 +61,9 @@
 		38AEE79B2ACCFB1200CAE9BD /* PocketMagic */ = {
 			isa = PBXGroup;
 			children = (
+				38E981AD2AD1B24F00893E25 /* Networking */,
+				38E981AA2AD1B23500893E25 /* Features */,
 				38AEE79C2ACCFB1200CAE9BD /* PocketMagicApp.swift */,
-				38ECE0F62ACDB5FB00C4C2C5 /* TabBarView.swift */,
-				38ECE0F82ACDB6D200C4C2C5 /* CharactersView.swift */,
 				38AEE7A02ACCFB1300CAE9BD /* Assets.xcassets */,
 				38AEE7A22ACCFB1300CAE9BD /* Preview Content */,
 			);
@@ -68,6 +76,74 @@
 				38AEE7A32ACCFB1300CAE9BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38E981AA2AD1B23500893E25 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				38E981AB2AD1B23B00893E25 /* TabBar */,
+				38E981AC2AD1B24300893E25 /* Characters */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		38E981AB2AD1B23B00893E25 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				38ECE0F62ACDB5FB00C4C2C5 /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		38E981AC2AD1B24300893E25 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				38E981B02AD1B26B00893E25 /* ViewModels */,
+				38E981AF2AD1B26600893E25 /* Views */,
+				38E981AE2AD1B25600893E25 /* Models */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		38E981AD2AD1B24F00893E25 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				38E981B72AD1B5DB00893E25 /* Characters */,
+				38E981B52AD1B2FA00893E25 /* BaseNetworking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		38E981AE2AD1B25600893E25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				38E981B12AD1B27A00893E25 /* CharactersModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38E981AF2AD1B26600893E25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38ECE0F82ACDB6D200C4C2C5 /* CharactersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38E981B02AD1B26B00893E25 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				38E981B32AD1B28800893E25 /* CharactersViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		38E981B72AD1B5DB00893E25 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				38E981B82AD1B5E600893E25 /* CharactersService.swift */,
+			);
+			path = Characters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +216,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E981B92AD1B5E600893E25 /* CharactersService.swift in Sources */,
 				38ECE0F72ACDB5FB00C4C2C5 /* TabBarView.swift in Sources */,
+				38E981B22AD1B27A00893E25 /* CharactersModel.swift in Sources */,
+				38E981B62AD1B2FA00893E25 /* BaseNetworking.swift in Sources */,
 				38AEE79D2ACCFB1200CAE9BD /* PocketMagicApp.swift in Sources */,
 				38ECE0F92ACDB6D200C4C2C5 /* CharactersView.swift in Sources */,
+				38E981B42AD1B28800893E25 /* CharactersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
