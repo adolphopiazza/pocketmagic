@@ -14,15 +14,21 @@ struct CharactersView: View {
     var body: some View {
         NavigationStack {
             List(viewModel.characters) { character in
-                VStack(alignment: .leading) {
-                    Text(character.name)
-                        .font(.headline)
-                    
-                    Text(character.actor.isEmpty ? "Not found" : character.actor)
-                        .font(.subheadline)
+                NavigationLink(value: character) {
+                    VStack(alignment: .leading) {
+                        Text(character.name)
+                            .font(.headline)
+                        
+                        Text(character.actor.isEmpty ? "Not found" : character.actor)
+                            .font(.subheadline)
+                            
+                    }
                 }
             }
-            .navigationTitle("Characters")
+            .navigationTitle(viewModel.viewTitle)
+            .navigationDestination(for: CharactersModel.self, destination: { character in
+                Text(character.name)
+            })
             .overlay {
                 if viewModel.characters.isEmpty && viewModel.errorMessage.isEmpty {
                     ProgressView("Loading...")
@@ -31,7 +37,7 @@ struct CharactersView: View {
             .overlay {
                 if !viewModel.errorMessage.isEmpty {
                     ContentUnavailableView("Something went wrong 😕",
-                                           systemImage: "x.circle",
+                                           systemImage: .SystemImages.xCircle,
                                            description: Text(viewModel.errorMessage))
                 }
             }

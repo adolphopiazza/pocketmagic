@@ -36,8 +36,11 @@ final class BaseNetworking<Model: Decodable> {
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            model = try JSONDecoder().decode([Model].self, from: data)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            model = try decoder.decode([Model].self, from: data)
         } catch {
+            print(error)
             throw APIErrors.badDecoder(description: error.localizedDescription)
         }
         

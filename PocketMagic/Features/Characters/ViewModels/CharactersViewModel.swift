@@ -9,6 +9,7 @@ import SwiftUI
 
 @Observable final class CharactersViewModel {
     
+    let viewTitle: String = "Characters"
     var characters: [CharactersModel] = []
     var errorMessage: String = ""
     
