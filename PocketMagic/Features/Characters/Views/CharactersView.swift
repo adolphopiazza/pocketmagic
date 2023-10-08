@@ -27,7 +27,7 @@ struct CharactersView: View {
             }
             .navigationTitle(viewModel.viewTitle)
             .navigationDestination(for: CharactersModel.self, destination: { character in
-                Text(character.name)
+                CharactersDetailView(characterModel: character)
             })
             .overlay {
                 if viewModel.characters.isEmpty && viewModel.errorMessage.isEmpty {
