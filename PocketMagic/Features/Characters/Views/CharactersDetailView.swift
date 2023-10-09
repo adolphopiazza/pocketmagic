@@ -40,8 +40,13 @@ struct CharactersDetailView: View {
                         Spacer()
                     }
                 } placeholder: {
-                    Text("Loading image...")
-                        .foregroundStyle(.gray)
+                    HStack {
+                        Spacer()
+                        
+                        ProgressView()
+                        
+                        Spacer()
+                    }
                 }
             } else {
                 ContentUnavailableView("No image", systemImage: "photo")
