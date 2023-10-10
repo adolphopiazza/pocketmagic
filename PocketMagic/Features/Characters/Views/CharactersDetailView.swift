@@ -49,7 +49,7 @@ struct CharactersDetailView: View {
                     }
                 }
             } else {
-                ContentUnavailableView("No image", systemImage: "photo")
+                ContentUnavailableView("No image", systemImage: .SystemImages.photo)
             }
         }
     }
@@ -79,7 +79,7 @@ struct CharactersDetailView: View {
                 CharactersDetailRowView(leadingText: "Core", trailingText: wand.core)
                 CharactersDetailRowView(leadingText: "Length", trailingText: String(wand.length ?? 0.0))
             } else {
-                ContentUnavailableView("No wand data", systemImage: "wand.and.rays")
+                ContentUnavailableView("No wand data", systemImage: .SystemImages.wandAndRays)
                     .symbolVariant(.slash)
             }
         }
@@ -92,7 +92,7 @@ struct CharactersDetailView: View {
                     Text(name)
                 }
             } else {
-                ContentUnavailableView("No alternate names", systemImage: "abc")
+                ContentUnavailableView("No alternate names", systemImage: .SystemImages.abc)
             }
         }
     }
@@ -104,7 +104,7 @@ struct CharactersDetailView: View {
                     Text(actor)
                 }
             } else {
-                ContentUnavailableView("No alternate actors", systemImage: "figure.socialdance")
+                ContentUnavailableView("No alternate actors", systemImage: .SystemImages.figurineSocialDance)
             }
         }
     }

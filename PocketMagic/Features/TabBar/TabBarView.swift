@@ -15,6 +15,11 @@ struct TabBarView: View {
                 .tabItem {
                     Label("Characters", systemImage: .SystemImages.person3Fill)
                 }
+            
+            SpellsView()
+                .tabItem {
+                    Label("Spells", systemImage: .SystemImages.wandAndStars)
+                }
         }
     }
     
